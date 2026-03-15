@@ -1,0 +1,20 @@
+---
+export interface Props {
+  city: string;
+  href: string;
+  status: 'certified' | 'in-progress';
+  statusLabel: string;
+  description: string;
+}
+
+const { city, href, status, statusLabel, description } = Astro.props;
+---
+
+<a href={href} class="city-card">
+  <h3>{city}</h3>
+  <span class:list={['status', status === 'certified' ? 'status-certified' : 'status-in-progress']}>
+    {statusLabel}
+  </span>
+  <p>{description}</p>
+  <span class="card-link">Learn more →</span>
+</a>

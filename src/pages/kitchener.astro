@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Bird Friendly Kitchener — Certified Bird Friendly City">
+  <Header slot="header" currentPath="/kitchener" />
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Bird Friendly Kitchener</h1>
+      <span class="status status-certified">✓ Certified Bird Friendly City — 2024</span>
+    </div>
+  </section>
+
+  <div class="page-content">
+    <p>
+      In November 2024, Kitchener was officially certified as a
+      <strong>Bird Friendly City</strong> by
+      <a href="https://naturecanada.ca/defend-nature/how-you-help-us-take-action/bfc/" target="_blank" rel="noopener">Nature Canada</a>,
+      recognizing the city's commitment to reducing threats to birds,
+      protecting and restoring habitats, and engaging the community.
+    </p>
+
+    <p>
+      The Bird Friendly Kitchener team is a subcommittee of
+      <a href="https://www.waterlooregionnature.ca" target="_blank" rel="noopener">Waterloo Region Nature</a>,
+      made up of dedicated community members including ecologists, educators, artists, and
+      bird enthusiasts. We work cooperatively with the City of Kitchener, the University of Waterloo,
+      and other community organizations.
+    </p>
+
+    <p>
+      Our work focuses on addressing key threats to birds — including window collisions, habitat loss,
+      pesticide use, and cat predation — while promoting bird-friendly practices across the community.
+    </p>
+
+    <p>
+      <strong>More content coming soon.</strong> In the meantime, visit our current site at
+      <a href="https://bfck.waterlooregionnature.ca" target="_blank" rel="noopener">bfck.waterlooregionnature.ca</a>.
+    </p>
+
+    <a href="/" class="back-link">← Back to home</a>
+  </div>
+
+  <Footer slot="footer" />
+</BaseLayout>

@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CityCard from '../components/CityCard.astro';
+---
+
+<BaseLayout title="Bird Friendly KW — Making Kitchener-Waterloo Bird Friendly">
+  <Header slot="header" currentPath="/" />
+
+  <section class="hero">
+    <div class="container">
+      <img src="/images/bfck-logo.png" alt="Bird Friendly Kitchener-Waterloo Logo" class="hero-logo" />
+      <h1>Bird Friendly Kitchener‑Waterloo</h1>
+      <p class="subtitle">Making our cities safer for birds — one community at a time.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Who We Are</h2>
+      <div class="about-text">
+        <p>
+          We are official subcommittees of
+          <a href="https://www.waterlooregionnature.ca" target="_blank" rel="noopener">Waterloo Region Nature</a>,
+          dedicated to making Kitchener and Waterloo safer places for birds.
+        </p>
+        <p>
+          We meet regularly and work cooperatively with municipalities, conservation organizations,
+          and community groups to reduce threats to birds, protect and restore habitats, and engage
+          residents in bird-friendly practices.
+        </p>
+        <p>
+          Kitchener achieved <strong>Bird Friendly City</strong> certification from
+          <a href="https://naturecanada.ca/defend-nature/how-you-help-us-take-action/bfc/" target="_blank" rel="noopener">Nature Canada</a>
+          in 2024. Waterloo is now embarking on its own certification journey.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2>Our Cities</h2>
+      <div class="city-cards">
+        <CityCard
+          city="Kitchener"
+          href="/kitchener"
+          status="certified"
+          statusLabel="✓ Certified Bird Friendly City"
+          description="Certified by Nature Canada in 2024. Working to protect birds through habitat restoration, collision prevention, and community engagement."
+        />
+        <CityCard
+          city="Waterloo"
+          href="/waterloo"
+          status="in-progress"
+          statusLabel="◌ Getting Started"
+          description="Embarking on the journey to Bird Friendly City certification. Building a team and developing an action plan."
+        />
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

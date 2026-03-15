@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Bird Friendly Waterloo — Getting Started">
+  <Header slot="header" currentPath="/waterloo" />
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Bird Friendly Waterloo</h1>
+      <span class="status status-in-progress">◌ Getting Started</span>
+    </div>
+  </section>
+
+  <div class="page-content">
+    <p>
+      The City of Waterloo is embarking on its journey toward
+      <strong>Bird Friendly City</strong> certification from
+      <a href="https://naturecanada.ca/defend-nature/how-you-help-us-take-action/bfc/" target="_blank" rel="noopener">Nature Canada</a>.
+    </p>
+
+    <p>
+      As an official subcommittee of
+      <a href="https://www.waterlooregionnature.ca" target="_blank" rel="noopener">Waterloo Region Nature</a>,
+      we are building a team of community members committed to making Waterloo a safer place for birds.
+      We meet regularly and work cooperatively with the City of Waterloo and other community organizations.
+    </p>
+
+    <p>
+      Inspired by Kitchener's successful certification in 2024, we are developing an action plan
+      to address threats to birds, protect and restore habitats, and engage residents across the city.
+    </p>
+
+    <p>
+      <strong>Interested in joining?</strong> We're looking for passionate community members to help
+      Waterloo achieve Bird Friendly City status. Stay tuned for more details.
+    </p>
+
+    <a href="/" class="back-link">← Back to home</a>
+  </div>
+
+  <Footer slot="footer" />
+</BaseLayout>

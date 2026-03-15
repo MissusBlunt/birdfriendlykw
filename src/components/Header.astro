@@ -1,0 +1,20 @@
+---
+export interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = '/' } = Astro.props;
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="header-logo">
+      <img src="/images/bfck-header-logo.png" alt="Bird Friendly KW" />
+    </a>
+    <nav class="header-nav">
+      <a href="/" class:list={[{ active: currentPath === '/' }]}>Home</a>
+      <a href="/kitchener" class:list={[{ active: currentPath === '/kitchener' }]}>Kitchener</a>
+      <a href="/waterloo" class:list={[{ active: currentPath === '/waterloo' }]}>Waterloo</a>
+    </nav>
+  </div>
+</header>
