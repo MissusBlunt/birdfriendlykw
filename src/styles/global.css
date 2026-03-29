@@ -292,6 +292,38 @@ a:hover {
   font-weight: 600;
 }
 
+/* Calendar */
+.calendar-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.calendar-container .calendar-intro {
+  max-width: 750px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  color: var(--color-text-light);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.calendar-embed {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  background: var(--color-white);
+}
+
+.calendar-embed iframe {
+  display: block;
+  width: 100%;
+  height: 600px;
+  border: none;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero {
