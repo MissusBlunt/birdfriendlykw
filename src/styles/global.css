@@ -324,6 +324,51 @@ a:hover {
   border: none;
 }
 
+/* Map embed */
+.map-embed {
+  margin: 2rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.map-embed iframe {
+  display: block;
+  width: 100%;
+  height: 480px;
+  border: none;
+}
+
+/* App download links */
+.app-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+
+.app-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.app-link:hover {
+  background: var(--color-primary-dark);
+  color: var(--color-white);
+}
+
+.app-link svg {
+  flex-shrink: 0;
+}
+
 /* Lights Out page */
 .lights-out-hero {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, var(--color-primary-dark) 100%);

@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Help Us Monitor and Prevent Window Collisions — Bird Friendly Kitchener-Waterloo">
+  <Header slot="header" currentPath="/window-collisions" />
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Help Us Monitor and Prevent Window Collisions</h1>
+    </div>
+  </section>
+
+  <div class="page-content">
+    <p>
+      Up to <strong>one billion</strong> birds die each year across North America by colliding
+      with glass windows, bus shelters, balcony panels, and other clear surfaces. They do not
+      recognize glass as a solid object, especially when the interior is illuminated at night,
+      or when vegetation is visible in particularly reflective glass during the day.
+    </p>
+
+    <p>
+      Bird Friendly Kitchener has launched its own
+      <a href="https://www.anecdata.org/projects/view/bfck-window-threat-monitoring" target="_blank" rel="noopener"><strong>collision monitoring initiative</strong></a>
+      so that bird team members, as well as the general public, can report window strikes using
+      a standard protocol. FLOCK – Fatal Light Observation &amp; Collision Kitchener. We are a
+      <a href="https://flap.org" target="_blank" rel="noopener">FLAP</a> trained, volunteer-led
+      monitoring program run by Bird Friendly City Kitchener. BFCK is an official subcommittee
+      of Waterloo Region Nature and supported by the City of Kitchener in our initiatives.
+    </p>
+
+    <div class="map-embed">
+      <iframe
+        src="https://www.google.com/maps/d/embed?mid=16rgrT9uY_04I_rEKuJ-joKfxmq2mk0g&ehbc=2E312F"
+        title="BFCK Window Threat Monitoring Map"
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <p>
+      We are using the Anecdata platform for citizen science initiatives to record not only
+      incidents involving birds, but also to assess and record buildings that have taken steps
+      to reduce bird strikes by treating glass surfaces with collision deterrent materials.
+      The project site includes details on survey methodology, an equipment list, and links
+      to the <a href="https://flap.maps.arcgis.com/sharing/rest/content/items/1a437a9f220243549e667100921e1e34/data" target="_blank" rel="noopener"><strong>Global Bird Rescue Manual</strong></a>.
+    </p>
+
+    <p>
+      We will relay any data collected to the Fatal Light Awareness Program's (FLAP) Global
+      Bird Collision Map and Bird-Friendly Building Survey to help FLAP and Nature Canada in
+      their broader initiatives.
+    </p>
+
+    <p>
+      To participate, download the Anecdata app for your phone and access the project via
+      the links below.
+    </p>
+
+    <div class="app-links">
+      <a href="https://www.anecdata.org/projects/view/1314" class="app-link" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        Anecdata Project
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=org.anecdata.mobile&hl=en_CA" class="app-link" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        Android App
+      </a>
+      <a href="https://apps.apple.com/gb/app/anecdata-org/id1315666791" class="app-link" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        iOS App
+      </a>
+    </div>
+
+    <a href="/" class="back-link">← Back to home</a>
+  </div>
+
+  <Footer slot="footer" />
+</BaseLayout>
