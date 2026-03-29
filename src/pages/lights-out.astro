@@ -1,0 +1,166 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Lights Out KW — Bird Friendly Kitchener-Waterloo">
+  <Header slot="header" currentPath="/lights-out" />
+
+  <section class="lights-out-hero">
+    <div class="container">
+      <h1>Lights Out K-W Building Challenge!</h1>
+      <h2>It's migration season!</h2>
+      <p class="tagline">Keep birds flying high by turning off non-essential lighting from 11pm – 6am.</p>
+    </div>
+  </section>
+
+  <div class="lights-out-section">
+    <p>
+      Most birds migrate at night, and brightly lit buildings can confuse and disorient them
+      on their journey, resulting in deadly collisions.
+    </p>
+    <p>
+      Join area leaders in avian conservation to dim the lights for migrating birds.
+    </p>
+    <p>
+      <strong><em>We're calling on public buildings and commercial properties in Waterloo Region
+      to step up and join the Lights Out K-W Building Challenge this spring.</em></strong>
+    </p>
+  </div>
+
+  <div class="lights-out-section section-alt">
+    <h3>The Challenge</h3>
+    <div class="challenge-content">
+      <div class="challenge-text">
+        <p>Participants pledge to:</p>
+        <ul>
+          <li>Reduce 75% of non-essential lighting during migration periods</li>
+          <li>Share the <strong><em>Lights Out</em></strong> message with employees, tenants, and networks.</li>
+        </ul>
+        <p>
+          <strong>Eligible Participants</strong><br />
+          Anyone! This includes municipal offices, schools, public buildings, and commercial
+          properties in Waterloo Region.
+        </p>
+        <p>
+          <strong>Levels of Participation and Key Migration Periods</strong><br />
+          The full participation commitment lasts from March 15 to June 1 to protect the full
+          suite of spring migrants. We ask for a minimum lights out observance between April 15
+          and May 15 when the largest numbers of birds move through the area.
+        </p>
+      </div>
+      <div class="challenge-image">
+        <img src="/images/lights-out-challenge.png" alt="City buildings at night with lights on, illustrating the challenge of light pollution for migrating birds" />
+      </div>
+    </div>
+  </div>
+
+  <div class="lights-out-section">
+    <h3>How I Can Help: Resources</h3>
+    <div class="resource-grid">
+      <a href="/docs/lighting-best-practices.pdf" class="resource-link" target="_blank" rel="noopener">
+        <svg class="resource-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg>
+        Lighting Best Practices
+      </a>
+      <a href="/docs/core-issues-explained.pdf" class="resource-link" target="_blank" rel="noopener">
+        <svg class="resource-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        Core Issues Explained
+      </a>
+      <a href="/docs/simple-actions.pdf" class="resource-link" target="_blank" rel="noopener">
+        <svg class="resource-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        Simple Actions
+      </a>
+      <a href="/docs/challenge-parameters.pdf" class="resource-link" target="_blank" rel="noopener">
+        <svg class="resource-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="M9 14l2 2 4-4"/></svg>
+        Challenge Parameters
+      </a>
+      <a href="/docs/dangers-of-migration.pdf" class="resource-link" target="_blank" rel="noopener">
+        <svg class="resource-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2H6a2 2 0 0 0-2 2v16l8-4 8 4V4a2 2 0 0 0-2-2z"/><path d="M9 10c0-1.5 1.5-3 3-3s3 1.5 3 3-3 4-3 4"/><circle cx="12" cy="16" r=".5"/></svg>
+        Dangers of Migration
+      </a>
+      <a href="/docs/light-pollution-details.pdf" class="resource-link" target="_blank" rel="noopener">
+        <svg class="resource-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        Light Pollution Details
+      </a>
+    </div>
+  </div>
+
+  <div class="lights-out-section section-alt">
+    <h3>Why It Matters</h3>
+    <p>
+      An estimated 1 billion birds are killed annually in North America by collisions with
+      buildings. Birds are most vulnerable during migration.
+    </p>
+    <p>
+      Species making their twice-yearly journeys of thousands of kilometres travel at night
+      because cooler temperatures, favourable wind patterns, and reduced risk from predators
+      make nocturnal migration safer and more efficient.
+    </p>
+    <p>
+      Birds are drawn toward brightly lit structures, causing confusion and disorientation.
+      Many either strike the building or land in urban spaces, only to take off at dawn and
+      fly into glass that reflects sky or vegetation.
+    </p>
+  </div>
+
+  <div class="lights-out-section">
+    <h3>Benefits of Participation</h3>
+    <ul class="benefits-list">
+      <li><strong>Wildlife Protection:</strong> Help reduce light pollution during spring and fall migration, when bright night lighting can disorient birds and increase window-collision risk</li>
+      <li><strong>Healthier Night Environment:</strong> Support a darker, more natural nightscape that benefits local ecosystems affected by artificial light at night</li>
+      <li><strong>Energy &amp; Cost Savings:</strong> Lower electricity use and operating costs by switching off unnecessary lighting and right-sizing what stays on</li>
+      <li><strong>Civic &amp; Organizational Leadership:</strong> Demonstrate visible environmental stewardship aligned with Kitchener's Bird Friendly City momentum and community conservation efforts</li>
+      <li><strong>Community Connection:</strong> Join a growing network of residents and organizations taking practical action to make Kitchener safer for birds</li>
+      <li><strong>Public Recognition:</strong> Participating sites can be highlighted through our initiative's communications</li>
+    </ul>
+  </div>
+
+  <div class="lights-out-section section-alt">
+    <h3>How to Join Bird Friendly Kitchener and Participate in Lights Out K-W</h3>
+    <ul>
+      <li>Commit your home or building by <a href="mailto:birdfriendlykitchener@gmail.com"><em><strong>contacting us</strong></em></a></li>
+      <li>Take action by reducing externally visible overnight lighting during migration periods</li>
+      <li>If a larger building or business, designate a participation coordinator and share with us your accomplishments</li>
+    </ul>
+    <p>
+      When you join the challenge, we will provide you with best practice checklists and sample
+      communications materials. If you choose, we would be happy to include your organization's
+      logo on our website and give you proper recognition in our newsletter and social media posts.
+    </p>
+  </div>
+
+  <div class="lights-out-section">
+    <h3>The Campaign</h3>
+    <div class="campaign-content">
+      <div class="campaign-text">
+        <p>
+          Lights Out K-W is a new initiative of Bird Friendly Kitchener targeting non-essential
+          lighting in the Waterloo Region. Aiming to ensure a darker night sky, and minimize
+          attraction, we encourage buildings and homes to go lights out during bird migration
+          seasons. This effort follows on and reinforces our migratory season bird-glass collision
+          monitoring program.
+        </p>
+        <p>
+          Throughout fall and spring migrations, collision surveys are conducted daily along set
+          routes in downtown Kitchener to assess dangers to migratory birds. During these early
+          morning surveys, volunteers document and collect bird-building collision fatalities and
+          rescue stunned and injured birds.
+        </p>
+        <p>
+          Bird Friendly Kitchener volunteers use this data to engage property owners, property
+          managers, and tenants to encourage them to install window treatments to break up the
+          reflective appearance of glass surfaces. We have also partnered with properties such as
+          the Kitchener Public Library to install bird-friendly glass treatments to windows.
+        </p>
+      </div>
+      <div class="campaign-image">
+        <img src="/images/lights-out-campaign.jpg" alt="Lights Out K-W campaign" />
+      </div>
+    </div>
+
+    <a href="/" class="back-link">← Back to home</a>
+  </div>
+
+  <Footer slot="footer" />
+</BaseLayout>

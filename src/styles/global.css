@@ -324,6 +324,151 @@ a:hover {
   border: none;
 }
 
+/* Lights Out page */
+.lights-out-hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, var(--color-primary-dark) 100%);
+  color: var(--color-white);
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.lights-out-hero h1 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.lights-out-hero h2 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+}
+
+.lights-out-hero .tagline {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.lights-out-section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.lights-out-section h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 1.25rem;
+}
+
+.lights-out-section p + p {
+  margin-top: 1rem;
+}
+
+.lights-out-section ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.lights-out-section ul li {
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+}
+
+.challenge-content {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.challenge-content .challenge-text {
+  flex: 1;
+}
+
+.challenge-content .challenge-image {
+  flex: 0 0 300px;
+}
+
+.challenge-content .challenge-image img {
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.resource-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.5rem 1rem;
+  background: var(--color-white);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-top: 3px solid var(--color-accent);
+  transition: transform 0.25s, box-shadow 0.25s;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-primary-dark);
+}
+
+.resource-link:nth-child(1) { border-top-color: #f0c040; }
+.resource-link:nth-child(2) { border-top-color: #e06050; }
+.resource-link:nth-child(3) { border-top-color: #e07090; }
+.resource-link:nth-child(4) { border-top-color: var(--color-primary); }
+.resource-link:nth-child(5) { border-top-color: #5090d0; }
+.resource-link:nth-child(6) { border-top-color: #7060b0; }
+
+.resource-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  color: var(--color-primary);
+}
+
+.resource-link .resource-icon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+  transition: transform 0.25s;
+}
+
+.resource-link:hover .resource-icon {
+  transform: scale(1.15);
+}
+
+.benefits-list li strong {
+  color: var(--color-primary-dark);
+}
+
+.campaign-content {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.campaign-content .campaign-text {
+  flex: 1;
+}
+
+.campaign-content .campaign-image {
+  flex: 0 0 280px;
+}
+
+.campaign-content .campaign-image img {
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero {
@@ -353,5 +498,28 @@ a:hover {
   .header-inner {
     flex-direction: column;
     gap: 0.5rem;
+  }
+
+  .lights-out-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .lights-out-hero h2 {
+    font-size: 1.1rem;
+  }
+
+  .challenge-content,
+  .campaign-content {
+    flex-direction: column;
+  }
+
+  .challenge-content .challenge-image,
+  .campaign-content .campaign-image {
+    flex: none;
+    width: 100%;
+  }
+
+  .resource-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
