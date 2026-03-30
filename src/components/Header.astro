@@ -14,8 +14,6 @@ const programsActive = currentPath === '/lights-out' || currentPath === '/window
     </a>
     <nav class="header-nav">
       <a href="/" class:list={[{ active: currentPath === '/' }]}>Home</a>
-      <a href="/kitchener" class:list={[{ active: currentPath === '/kitchener' }]}>Kitchener</a>
-      <a href="/waterloo" class:list={[{ active: currentPath === '/waterloo' }]}>Waterloo</a>
       <div class="nav-dropdown">
         <button class:list={['nav-dropdown-toggle', { active: programsActive }]}>
           Programs
