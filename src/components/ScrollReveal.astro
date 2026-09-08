@@ -1,0 +1,34 @@
+---
+export interface Props {
+  class?: string;
+  delay?: number;
+}
+
+const { class: className = '', delay } = Astro.props;
+const delayClass = delay ? `reveal-delay-${delay}` : '';
+---
+
+<div class:list={['reveal', delayClass, className]}>
+  <slot />
+</div>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const reveals = document.querySelectorAll('.reveal');
+    if (!reveals.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    reveals.forEach((el) => observer.observe(el));
+  });
+</script>

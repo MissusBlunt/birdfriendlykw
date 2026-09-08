@@ -12,6 +12,10 @@ const programsActive = currentPath === '/lights-out' || currentPath === '/window
     <a href="/" class="header-logo">
       <img src="/images/bfck-header-logo.png" alt="Bird Friendly KW" />
     </a>
+    <button class="hamburger-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg class="hamburger-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="close-icon" style="display:none" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
     <nav class="header-nav">
       <a href="/" class:list={[{ active: currentPath === '/' }]}>Home</a>
       <div class="nav-dropdown">
@@ -28,3 +32,21 @@ const programsActive = currentPath === '/lights-out' || currentPath === '/window
     </nav>
   </div>
 </header>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const toggle = document.querySelector('.hamburger-toggle');
+    const nav = document.querySelector('.header-nav');
+    const hamburgerIcon = toggle?.querySelector('.hamburger-icon') as HTMLElement;
+    const closeIcon = toggle?.querySelector('.close-icon') as HTMLElement;
+
+    toggle?.addEventListener('click', () => {
+      const isOpen = nav?.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+      if (hamburgerIcon && closeIcon) {
+        hamburgerIcon.style.display = isOpen ? 'none' : 'block';
+        closeIcon.style.display = isOpen ? 'block' : 'none';
+      }
+    });
+  });
+</script>
