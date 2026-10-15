@@ -309,6 +309,20 @@ a:hover {
   color: var(--color-white);
 }
 
+/* Jumbotron */
+
+.jumbotron {
+  max-width: 750px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding: 5px;
+  background:  #fff3cd;
+  text-align: center;
+  font-size: 1.05rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+}
+
 /* Footer */
 .site-footer {
   background-color: var(--color-primary-dark);

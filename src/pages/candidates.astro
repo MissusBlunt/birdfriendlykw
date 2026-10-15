@@ -1,0 +1,40 @@
+---
+import contacts from "~/assets/json/candidates.json";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Municipal and Regional Candidates">
+  <Header slot="header" currentPath="/calendar" />
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Municipal and Regional Candidates</h1>
+    </div>
+  </section>
+
+<div class="page-content">
+    <ScrollReveal>
+      <p>{name}
+      </p>
+    </ScrollReveal>
+
+    <ScrollReveal>
+      <p></p>
+    </ScrollReveal>
+
+    <ScrollReveal>
+      <p></p>
+    </ScrollReveal>
+
+    <ScrollReveal>
+      <p> </p>
+
+      <a href="/" class="back-link">← Back to home</a>
+    </ScrollReveal>
+  </div>
+
+
+  <Footer slot="footer" />
+</BaseLayout>
