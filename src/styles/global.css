@@ -644,7 +644,8 @@ a:hover, a:focus {
   border-radius: 5px;
   outline: none;
   transition: 0.4s;
-  decoration: bold;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 .active, .accordion:hover {
@@ -653,9 +654,23 @@ a:hover, a:focus {
 
 .panel {
   padding: 0 18px;
+  margin-bottom: 30px;
   background-color: white;
-  display: none;
+  max-height: 0;
   overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
 /* Scroll-reveal animations */
