@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import candidatesData from "../assets/json/candidates.json";
 import ScrollReveal from '../components/ScrollReveal.astro';
+import Accordion from '../components/Accordion.astro'
 
 let candidates = candidatesData;
 ---
@@ -18,24 +19,33 @@ let candidates = candidatesData;
   </section>
 
 <div class="page-content">
-    <ScrollReveal>
-            {candidates.map(c => (
-    <p>{c.name} </p>
-  ))}
-      
-    </ScrollReveal>
+<section>
+   {candidates.map(c => (
+    <h3>{c.name} </h3>
+    <p><strong>Pronouns: </strong>{c.pronouns} </p>
+    <p><strong>Running for: </strong>{c.running} </p>
+    <p><strong>Ward: </strong> {c.ward} </p>
+    <p><strong>Level of support for Kitchener’s certification as a Bird Friendly City: </strong>{c.support} </p>
+    <Accordion
+    title="Responses"
+            desciption="<p><strong>Which of the following priorities for bird friendliness & environmental stewardship are you most excited to pursue as an elected official?
+</strong></p>
+        <p>{c.priorities}</p>
+        <p><strong>What is the most bird-friendly part of your platform?
+</strong>
+</p>
+        <p>{c.platform}</p>
+        <p><strong>What is your favourite bird species and why? </strong>
+</p>
+        <p>{c.favourite}</p>
+        <p><strong>Is there anything else you want voters to know?</strong>
+        </p>
+        <p>{c.extra}</p>"
+        />
+   ))}
 
+</section>
     <ScrollReveal>
-      <p></p>
-    </ScrollReveal>
-
-    <ScrollReveal>
-      <p></p>
-    </ScrollReveal>
-
-    <ScrollReveal>
-      <p> </p>
-
       <a href="/" class="back-link">← Back to home</a>
     </ScrollReveal>
   </div>

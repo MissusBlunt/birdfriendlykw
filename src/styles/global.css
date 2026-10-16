@@ -630,6 +630,34 @@ a:hover, a:focus {
   display: block;
 }
 
+/* Accordion */
+
+.accordion {
+  background-color: var(--color-primary);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  margin: 15px 0px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.4s;
+  decoration: bold;
+}
+
+.active, .accordion:hover {
+  background-color: var(-color-accent: #95d5b2;);
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
 /* Scroll-reveal animations */
 .reveal {
   opacity: 0;
