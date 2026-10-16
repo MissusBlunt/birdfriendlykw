@@ -1,12 +1,15 @@
 ---
-import contacts from "~/assets/json/candidates.json";
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import candidatesData from "../assets/json/candidates.json";
+import ScrollReveal from '../components/ScrollReveal.astro';
+
+let candidates = candidatesData;
 ---
 
 <BaseLayout title="Municipal and Regional Candidates">
-  <Header slot="header" currentPath="/calendar" />
+  <Header slot="header" currentPath="/candidates" />
 
   <section class="page-header">
     <div class="container">
@@ -16,8 +19,10 @@ import Footer from '../components/Footer.astro';
 
 <div class="page-content">
     <ScrollReveal>
-      <p>{name}
-      </p>
+            {candidates.map(c => (
+    <p>{c.name} </p>
+  ))}
+      
     </ScrollReveal>
 
     <ScrollReveal>
@@ -34,7 +39,6 @@ import Footer from '../components/Footer.astro';
       <a href="/" class="back-link">← Back to home</a>
     </ScrollReveal>
   </div>
-
 
   <Footer slot="footer" />
 </BaseLayout>

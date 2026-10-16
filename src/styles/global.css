@@ -39,11 +39,13 @@ img {
 a {
   color: var(--color-primary);
   text-decoration: none;
+  font-weight: bold;
   transition: color 0.2s;
 }
 
-a:hover {
+a:hover, a:focus {
   color: var(--color-primary-dark);
+  text-decoration: underline;
 }
 
 .container {
@@ -315,12 +317,16 @@ a:hover {
   max-width: 750px;
   min-width: 300px;
   margin: 0 auto;
-  padding: 5px;
+  padding: 10px;
   background:  #fff3cd;
   text-align: center;
   font-size: 1.05rem;
   color: var(--color-text-light);
   line-height: 1.8;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #bc9209;
+  border-width: 2px;
 }
 
 /* Footer */
