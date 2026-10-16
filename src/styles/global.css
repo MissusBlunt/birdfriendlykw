@@ -39,11 +39,13 @@ img {
 a {
   color: var(--color-primary);
   text-decoration: none;
+  font-weight: bold;
   transition: color 0.2s;
 }
 
-a:hover {
+a:hover, a:focus {
   color: var(--color-primary-dark);
+  text-decoration: underline;
 }
 
 .container {
@@ -307,6 +309,24 @@ a:hover {
 .city-card .card-link:hover {
   background-color: var(--color-primary-dark);
   color: var(--color-white);
+}
+
+/* Jumbotron */
+
+.jumbotron {
+  max-width: 750px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  background:  #fff3cd;
+  text-align: center;
+  font-size: 1.05rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #bc9209;
+  border-width: 2px;
 }
 
 /* Footer */
@@ -608,6 +628,49 @@ a:hover {
 
 .hamburger-toggle svg {
   display: block;
+}
+
+/* Accordion */
+
+.accordion {
+  background-color: var(--color-primary);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  margin: 15px 0px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.4s;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.active, .accordion:hover {
+  background-color: var(-color-accent: #95d5b2;);
+}
+
+.panel {
+  padding: 0 18px;
+  margin-bottom: 30px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
 /* Scroll-reveal animations */

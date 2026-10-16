@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import candidatesData from "../assets/json/candidates.json";
+import ScrollReveal from '../components/ScrollReveal.astro';
+
+let candidates = candidatesData;
+---
+
+<BaseLayout title="Municipal and Regional Candidates">
+  <Header slot="header" currentPath="/candidates" />
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Municipal and Regional Candidates</h1>
+    </div>
+  </section>
+
+<div class="page-content">
+<section>
+   {candidates.map(c => (
+    <h3>{c.name} </h3>
+    <p><strong>Pronouns: </strong>{c.pronouns} </p>
+    <p><strong>Running for: </strong>{c.running} </p>
+    <p><strong>Ward: </strong> {c.ward} </p>
+    <p><strong>Level of support for Kitchener’s certification as a Bird Friendly City: </strong>{c.support} </p>
+    <button class="accordion">Responses</button>
+    <div class="panel">
+      <p><strong>Which of the following priorities for bird friendliness & environmental stewardship are you most excited to pursue as an elected official?
+      </strong></p>
+              <p>{c.priorities}</p>
+              <p><strong>What is the most bird-friendly part of your platform?
+      </strong>
+      </p>
+              <p>{c.platform}</p>
+              <p><strong>What is your favourite bird species and why? </strong>
+      </p>
+              <p>{c.favourite}</p>
+              <p><strong>Is there anything else you want voters to know?</strong>
+              </p>
+              <p>{c.extra}</p>
+    </div>
+   ))}
+
+</section>
+    <ScrollReveal>
+      <a href="/" class="back-link">← Back to home</a>
+    </ScrollReveal>
+  </div>
+
+  <Footer slot="footer" />
+</BaseLayout>
